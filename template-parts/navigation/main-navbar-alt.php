@@ -50,7 +50,6 @@
 						'menu_class'      => 'navbar-nav mr-auto',
 						'fallback_cb'     => 'Themesmandu_Starter_WP_Bootstrap_Navwalker::fallback',
 						'menu_id'         => false,
-						'depth'           => 2,
 						'walker'          => new Themesmandu_Starter_WP_Bootstrap_Navwalker(),
 					)
 				);

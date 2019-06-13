@@ -44,7 +44,6 @@
 						'container_class' => 'collapse navbar-collapse justify-content-end',
 						'menu_id'         => false,
 						'menu_class'      => 'navbar-nav',
-						'depth'           => 2,
 						'fallback_cb'     => 'Themesmandu_Starter_WP_Bootstrap_Navwalker::fallback',
 						'walker'          => new Themesmandu_Starter_WP_Bootstrap_Navwalker(),
 					)
