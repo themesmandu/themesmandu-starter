@@ -14,49 +14,57 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
+
+
 /* Text meant only for screen readers. */
+
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	word-wrap: normal !important;
-	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
-	/* Above WP toolbar. */
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
 }
 
+
 /* Do not show the outline on the skip link target. */
+
 #content[tabindex="-1"]:focus {
-	outline: 0;
+    outline: 0;
 }
+
 
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 .navbar.navbar-dark,
 .site-footer {
     background-color: #343a40;
@@ -67,16 +75,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
     color: #6c757d;
 }
 
-.bypostauthor{}
+.bypostauthor {}
+
 
 /*--------------------------------------------------------------
 # Menu / Navigation
 --------------------------------------------------------------*/
+
 .dropdown-toggle::after,
 .dropup .dropdown-toggle::after,
 .dropright .dropdown-toggle::after {
     margin-left: .5em;
 }
+
 .dropdown-toggle::after,
 .dropdown-toggle::before {
     vertical-align: middle !important;
@@ -108,6 +119,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------
 # Post/Page Navigation
 --------------------------------------------------------------*/
+
 .nav-links {
     margin: 20px 0;
 }
@@ -127,7 +139,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     border: 1px solid #dee2e6;
 }
 
-.page-numbers:hover{
+.page-numbers:hover {
     z-index: 2;
     color: #0056b3;
     text-decoration: none;
@@ -135,7 +147,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     border-color: #dee2e6;
 }
 
-.page-numbers.current{
+.page-numbers.current {
     z-index: 1;
     color: #fff;
     background-color: #007bff;
@@ -145,16 +157,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .page-numbers:first-child {
     margin-left: 0;
     border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem; 
+    border-bottom-left-radius: .25rem;
 }
 
 .page-numbers:last-child {
     margin-right: 0;
     border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem; 
+    border-bottom-right-radius: .25rem;
 }
 
-.nav-previous, .nav-next {
+.nav-previous,
+.nav-next {
     display: inline-block;
 }
 
@@ -162,6 +175,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------
 # Images / Gallery
 --------------------------------------------------------------*/
+
 
 /* =Header Image & Site Logo Image == */
 
@@ -193,7 +207,7 @@ div.aligncenter {
 }
 
 .alignright {
-    float:right;
+    float: right;
     margin: 5px 0 20px 20px;
 }
 
@@ -230,8 +244,9 @@ a img.aligncenter {
 .wp-caption {
     background: #fff;
     border: 1px solid #f0f0f0;
-	font-size: 90%;
-    max-width: 96%; /* Image does not overflow the content area */
+    font-size: 90%;
+    max-width: 96%;
+    /* Image does not overflow the content area */
     padding: 5px 3px 10px;
     text-align: center;
 }
@@ -268,10 +283,11 @@ a img.aligncenter {
     max-width: 100%;
     height: auto;
 }
- 
+
 .card .wp-post-image {
     height: auto;
 }
+
 
 /* == WP Gallery ====================*/
 
@@ -322,6 +338,7 @@ a img.aligncenter {
     display: block;
 }
 
+
 /*--------------------------------------------------------------
 # Home / Archives / Front Page
 --------------------------------------------------------------*/
@@ -339,16 +356,18 @@ a img.aligncenter {
 }
 
 .front-page .jumbotron {
-	border-radius:0;
+    border-radius: 0;
 }
 
 .blog .jumbotron {
     background-size: cover !important;
 }
 
+
 /*--------------------------------------------------------------
 # Post/Page
 --------------------------------------------------------------*/
+
 .cat-links,
 .tags-links,
 .entry-date {
@@ -363,31 +382,36 @@ a img.aligncenter {
 .entry-title,
 .page-title,
 .blog-header h1 {
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 time.updated {
     display: none;
 }
 
-.content-area >*,
-.comments-area >*,
-.widget-area >* {
+.content-area>*,
+.comments-area>*,
+.widget-area>* {
     max-width: 100%;
 }
+
 
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
+
 .comment-list {
     padding-left: 0;
 }
+
 .comment-list .comment {
     display: block;
 }
+
 .comment-content.card-block {
     padding: 20px;
 }
+
 .comment-body .pull-left {
     padding-right: .625rem;
 }
@@ -415,6 +439,7 @@ time.updated {
     font-size: 1rem;
 }
 
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -432,6 +457,7 @@ time.updated {
     text-align: justify;
 }
 
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -439,20 +465,20 @@ time.updated {
 .woocommerce-billing-fields .form-row,
 .woocommerce-shipping-fields .form-row,
 .woocommerce form .form-row {
-	display: block;
+    display: block;
 }
 
 .woocommerce .col2-set .col-1,
 .woocommerce-page .col2-set .col-1,
 .woocommerce .col2-set .col-2,
 .woocommerce-page .col2-set .col-2 {
-	max-width: unset;
+    max-width: unset;
 }
+
 
 /*----- special for demo version ------*/
 
-@media (min-width: 576px)
-.highlight {
+@media (min-width: 576px) .highlight {
     padding: 1.5rem;
 }
 
@@ -466,26 +492,27 @@ time.updated {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
- 
-/* iPhone */
-@media (min-width: 320px) and (max-width: 480px) {
 
-}
+
+/* iPhone */
+
+@media (min-width: 320px) and (max-width: 480px) {}
+
 
 /* iPhone 5 */
-@media (min-width: 320px) and (max-width: 568px) {
 
-}
+@media (min-width: 320px) and (max-width: 568px) {}
+
 
 /* Tablet */
-@media (min-width: 600px) and (max-width: 800px) {
 
-}
+@media (min-width: 600px) and (max-width: 800px) {}
+
 
 /* iPad 2, 3, mini */
-@media (min-width: 768px) and (max-width: 1024px) {
-	
-}
+
+@media (min-width: 768px) and (max-width: 1024px) {}

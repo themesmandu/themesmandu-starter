@@ -17,6 +17,9 @@ get_header();
 	<div class="row">
 
 		<div id="primary" class="content-area col-md-12">
+		<i class="fas fa-chevron-up"></i>
+		<i class="fas fa-align-left"></i>
+		<div class="lol"></div>
 			<main id="main" class="site-main">
 
 			<?php
