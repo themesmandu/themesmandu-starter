@@ -1,17 +1,36 @@
-.lol {
-    height: 40px;
-    width: 40px;
-    background: red;
+/* Dropdown Styles -- */
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    margin: 0;
+    padding: 28px 0 0;
+    border: none;
+    border-radius: 0;
 }
 
-.lol:before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f007";
+.dropdown-menu .menu-item-has-children {
+    position: relative;
 }
 
-.lol:before {
+.dropdown-toggle::after,
+.dropdown-menu .menu-item-has-children::after {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    content: "\f007";
+    font-size: 12px;
+    content: "\f078";
+    color: #2e5ea2;
+    display: inline-block;
+    padding: 5px;
+    line-height: 1;
+    border: none;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+}
+
+.dropdown-menu .menu-item-has-children::after {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: rotate(90deg);
+    color: #ffffff;
 }

@@ -177,10 +177,6 @@ function themesmandu_starter_scripts() {
 
 	// Theme scripts.
 	wp_enqueue_script( 'themesmandu-starter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '26032012', true );
-	if ( get_theme_mod( 'mainmenu_dropdown_mode' ) !== 'bootstrap' ) {
-		// Dropdown submenu by hover.
-		wp_enqueue_script( 'themesmandu-starter-dropdown-hover', get_template_directory_uri() . '/js/dropdown-hover.js', array(), wp_get_theme()->get( 'Version' ), true );
-	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
