@@ -15,504 +15,329 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 
-/*--------------------------------------------------------------
-# Accessibility
---------------------------------------------------------------*/
+/* -- All Basic Styles Of Theme -- */
 
-
-/* Text meant only for screen readers. */
-
-.screen-reader-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    word-wrap: normal !important;
-    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    word-break: break-word;
 }
 
-.screen-reader-text:focus {
-    background-color: #f1f1f1;
-    border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    clip: auto !important;
+#page {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+a {
+    color: #27b0ff;
+    transition: .3s;
+}
+
+a:link {
+    cursor: pointer;
+}
+
+a:focus,
+a:active {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p {
+    font-size: 17px;
+    color: #282b30;
+    line-height: 1.8;
+}
+
+figure,
+img,
+iframe {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+label {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #353638;
+    display: block;
+}
+
+input,
+textarea,
+select,
+.comment-respond input[type=text],
+.comment-respond input[type=email],
+.comment-respond .comment-form-comment textarea {
+    font-size: 15px;
+    color: #777777;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .14);
+    width: 100%;
+    padding: 12px 15px;
+}
+
+input[type="submit"] {
+    font-size: 14px;
+    background: #2e5ea2;
+    color: #ffffff;
+    width: auto;
+    border: none;
+    padding: 15px 25px;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+input[type="submit"]:hover,
+div.wpcf7 input[type=reset]:hover {
+    background: #e4be1a;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+select {
+    padding-left: 8px;
+}
+
+blockquote {
+    border-left: 4px solid #1e4b8e;
+    padding-left: 20px;
+    position: relative;
+}
+
+blockquote:before {
+    font-family: 'Font Awesome\ 5 Free';
+    content: "\f10d";
+    font-size: 52px;
+    font-weight: 900;
+    margin-right: 10px;
+    position: absolute;
+    color: #1e4b8e;
+    opacity: .2;
+}
+
+blockquote p {
+    font-style: italic;
+    color: #1e4b8e;
+}
+
+table {
+    font-size: 13px;
+    color: #556378;
+    width: 100%;
+    line-height: 2;
+}
+
+table th {
+    color: #27b0ff;
+}
+
+table caption {
+    font-size: 19px;
+    color: #153f7b;
+    caption-side: top;
+    padding: 0 0 10px;
+    line-height: 1.5;
+}
+
+
+/* -- Skip Link Styles -- */
+
+.skip-link {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
     color: #21759b;
     display: block;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: bold;
-    height: auto;
-    left: 5px;
     line-height: normal;
     padding: 15px 23px 14px;
+    scroll-behavior: smooth;
+}
+
+.skip-link :focus {
+    scroll-behavior: smooth;
+}
+
+.skip-link:hover {
     text-decoration: none;
-    top: 5px;
-    width: auto;
-    z-index: 100000;
-    /* Above WP toolbar. */
 }
 
 
-/* Do not show the outline on the skip link target. */
+/* -- post-gallery figure -- */
 
-#content[tabindex="-1"]:focus {
-    outline: 0;
+.gallery-item a {
+    display: unset;
 }
 
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-
-.navbar.navbar-dark,
-.site-footer {
-    background-color: #343a40;
+.gallery-item a:after {
+    content: unset !important;
 }
 
-.site-footer,
-.site-footer a {
-    color: #6c757d;
+.gallery figure {
+    display: inline-grid;
+    padding: 2px;
+    margin-bottom: 0;
 }
 
-.bypostauthor {}
-
-
-/*--------------------------------------------------------------
-# Menu / Navigation
---------------------------------------------------------------*/
-
-.dropdown-toggle::after,
-.dropup .dropdown-toggle::after,
-.dropright .dropdown-toggle::after {
-    margin-left: .5em;
-}
-
-.dropdown-toggle::after,
-.dropdown-toggle::before {
-    vertical-align: middle !important;
-}
-
-.dropdown-toggle::after {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: .357em;
-    vertical-align: .357em;
-    content: "";
-    margin-top: -.28em;
-    width: .42em;
-    height: .42em;
-    border: 1px solid;
-    border-top: 0;
-    border-left: 0;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.nav-item.show .dropdown-toggle::after {
-    -webkit-transform: translateY(50%) rotate(-135deg);
-    transform: translateY(50%) rotate(-135deg);
-}
-
-
-/*--------------------------------------------------------------
-# Post/Page Navigation
---------------------------------------------------------------*/
-
-.nav-links {
-    margin: 20px 0;
-}
-
-.nav-links .btn {
-    background-color: #f2f2f2;
-}
-
-.page-numbers {
-    position: relative;
-    display: inline-block;
-    padding: .5rem .95rem;
-    margin-left: -6px;
-    line-height: 1.25;
-    color: #007bff;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-}
-
-.page-numbers:hover {
-    z-index: 2;
-    color: #0056b3;
-    text-decoration: none;
-    background-color: #e9ecef;
-    border-color: #dee2e6;
-}
-
-.page-numbers.current {
-    z-index: 1;
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
-}
-
-.page-numbers:first-child {
-    margin-left: 0;
-    border-top-left-radius: .25rem;
-    border-bottom-left-radius: .25rem;
-}
-
-.page-numbers:last-child {
-    margin-right: 0;
-    border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem;
-}
-
-.nav-previous,
-.nav-next {
-    display: inline-block;
-}
-
-
-/*--------------------------------------------------------------
-# Images / Gallery
---------------------------------------------------------------*/
-
-
-/* =Header Image & Site Logo Image == */
-
-.custom-logo {
-    max-height: 40px;
-    width: auto;
-}
-
-.wp-custom-header {
-    overflow: hidden;
-}
-
-.wp-custom-header img {
+.gallery figure img {
     width: 100%;
     height: auto;
 }
 
-
-/* =Images ========================= */
-
-.alignnone {
-    margin: 5px 20px 20px 0;
+.gallery-columns-1 figure {
+    width: 100%;
 }
 
-.aligncenter,
-div.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
+.gallery-columns-2 figure {
+    width: 50%;
+}
+
+.gallery-columns-3 figure {
+    width: 33.333333%;
+}
+
+.gallery-columns-4 figure {
+    width: 25%;
+}
+
+.gallery-columns-5 figure {
+    width: 20%;
+}
+
+.gallery-columns-6 figure {
+    width: 16.666667%;
+}
+
+.gallery-columns-7 figure {
+    width: 14.2857%;
+}
+
+.gallery-columns-8 figure {
+    width: 12.5%;
+}
+
+.gallery-columns-9 figure {
+    width: 11.1111%;
+}
+
+.gallery {
+    margin: 0 -1px;
+}
+
+.gallery-columns-5 figure,
+.gallery-columns-6 figure,
+.gallery-columns-7 figure,
+.gallery-columns-8 figure,
+.gallery-columns-9 figure {
+    padding: 1px;
+    margin-bottom: 0;
+}
+
+.gallery-columns-5 figure figcaption,
+.gallery-columns-6 figure figcaption,
+.gallery-columns-7 figure figcaption,
+.gallery-columns-8 figure figcaption,
+.gallery-columns-9 figure figcaption {
+    font-size: 10px;
+}
+
+
+/* --Alignments Styles --- */
+
+.alignleft {
+    display: inline;
+    float: left;
+    margin-right: 1.5em;
 }
 
 .alignright {
+    display: inline;
     float: right;
-    margin: 5px 0 20px 20px;
-}
-
-.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
+    margin-left: 1.5em;
 }
 
 .aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
-}
-
-a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-}
-
-a img.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-a img.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-
-a img.aligncenter {
+    clear: both;
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
-.wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    font-size: 90%;
-    max-width: 96%;
-    /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
-    text-align: center;
-}
-
-.wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px;
-}
-
-.wp-caption img {
-    border: 0 none;
-    height: auto;
-    margin: 0;
-    max-width: 98.5%;
-    padding: 0;
-    width: auto;
-}
-
-.wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px;
-}
-
-.entry-content img {
-    max-width: 100%;
-    height: auto;
-}
-
-.card .wp-post-image {
-    height: auto;
-}
-
-
-/* == WP Gallery ====================*/
-
-.gallery {
-    margin-bottom: 1.5em;
-}
-
-.gallery-item {
-    display: inline-block;
-    text-align: center;
-    vertical-align: top;
-    width: 100%;
-}
-
-.gallery-columns-2 .gallery-item {
-    max-width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-    max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-    max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-    max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-    max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-    max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-    max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-    max-width: 11.11%;
-}
-
+figcaption,
+.wp-caption-text,
 .gallery-caption {
-    display: block;
-}
-
-
-/*--------------------------------------------------------------
-# Home / Archives / Front Page
---------------------------------------------------------------*/
-
-.front-page .jumbotron {
-    background-size: cover !important;
-}
-
-.front-page .jumbotron {
-    background-color: #FFF;
-}
-
-.front-page .jumbotron .container {
-    max-width: 40rem;
-}
-
-.front-page .jumbotron {
-    border-radius: 0;
-}
-
-.blog .jumbotron {
-    background-size: cover !important;
-}
-
-
-/*--------------------------------------------------------------
-# Post/Page
---------------------------------------------------------------*/
-
-.cat-links,
-.tags-links,
-.entry-date {
-    margin-right: 10px;
-}
-
-.edit-link {
-    display: block;
-    margin: 10px 0;
-}
-
-.entry-title,
-.page-title,
-.blog-header h1 {
-    word-wrap: break-word;
-}
-
-time.updated {
-    display: none;
-}
-
-.content-area>*,
-.comments-area>*,
-.widget-area>* {
-    max-width: 100%;
-}
-
-
-/*--------------------------------------------------------------
-# Comments
---------------------------------------------------------------*/
-
-.comment-list {
-    padding-left: 0;
-}
-
-.comment-list .comment {
-    display: block;
-}
-
-.comment-content.card-block {
-    padding: 20px;
-}
-
-.comment-body .pull-left {
-    padding-right: .625rem;
-}
-
-.comments-area {
-    margin: 40px 0;
-}
-
-.comments-title {
-    padding-bottom: 20px;
-}
-
-.comments-link {
-    text-align: right;
-    display: block;
-}
-
-.comments-title,
-.comment-reply-title {
-    font-size: 1.5rem;
-}
-
-.comment-meta,
-.comment-body .card-header h5 {
-    font-size: 1rem;
-}
-
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-
-.calendar_wrap table {
-    width: 90%;
-    text-align: right;
-}
-
-.calendar_wrap caption {
+    font-family: NunitoSemiBold;
+    font-size: 14px;
+    color: #6d7683;
+    margin-top: 4px;
     text-align: center;
 }
 
-.calendar_wrap tfoot {
-    text-align: justify;
+.widget .gallery-caption {
+    font-size: 12px;
 }
 
 
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
+/* -- to the top css -- */
 
-.woocommerce-billing-fields .form-row,
-.woocommerce-shipping-fields .form-row,
-.woocommerce form .form-row {
-    display: block;
+.up-btn {
+    position: fixed;
+    visibility: hidden;
+    bottom: 5%;
+    right: 15px;
+    outline: none;
+    background: rgba(0, 0, 0, .3);
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    border-radius: 0;
+    border: 1px solid #ffffff;
+    border-right: none;
+    outline: none !important;
+    transition: all .3s;
+    transform: translate3d(100px, 0, 0);
 }
 
-.woocommerce .col2-set .col-1,
-.woocommerce-page .col2-set .col-1,
-.woocommerce .col2-set .col-2,
-.woocommerce-page .col2-set .col-2 {
-    max-width: unset;
+#up-btn:hover {
+    background: #3381f2;
+    border: 1px solid #3381f2;
+    border-right: none;
 }
 
-
-/*----- special for demo version ------*/
-
-@media (min-width: 576px) .highlight {
-    padding: 1.5rem;
+.up-btn:focus {
+    border-color: #ffffff;
 }
 
-.highlight {
-    margin: auto;
-    max-width: 90%;
-    padding: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    background-color: #f2f3f5;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+#up-btn i {
+    font-size: 18px;
+    transition: .5s;
+    color: #ffffff;
 }
 
+#up-btn:hover i {
+    color: #000000;
+}
 
-/*--------------------------------------------------------------
-# Media Queries
---------------------------------------------------------------*/
-
-
-/* iPhone */
-
-@media (min-width: 320px) and (max-width: 480px) {}
-
-
-/* iPhone 5 */
-
-@media (min-width: 320px) and (max-width: 568px) {}
-
-
-/* Tablet */
-
-@media (min-width: 600px) and (max-width: 800px) {}
-
-
-/* iPad 2, 3, mini */
-
-@media (min-width: 768px) and (max-width: 1024px) {}
+.up-btn.ayotothetop {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+}

@@ -9,7 +9,7 @@
 
 ?>
 	<header id="masthead" class="site-header" role="banner">
-		<nav class="navbar navbar-expand-md navbar-dark">
+		<nav class="navbar navbar-expand-md bg-dark">
 			<div class="container">
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>

@@ -161,13 +161,19 @@ function themesmandu_starter_scripts() {
 	// Theme styles.
 	wp_enqueue_style( 'themesmandu-starter-style', get_stylesheet_uri(), array(), wp_get_theme()->get( 'Version' ) );
 
+	// Loading main stylesheet.
+	wp_enqueue_style( 'main-css', get_theme_file_uri( '/assets/css/main.css' ), array( 'themesmandu-starter-style' ), wp_get_theme()->get( 'Version' ) );
+
+	// Add font-awesome fonts, used in the main stylesheet.
+	wp_enqueue_style( 'themesmandu-starter-font-awesome', get_theme_file_uri( '/assets/font-awesome-5.7.2/css/all.css' ), array( 'themesmandu-starter-style' ), '5.7.2' );
+
 	// Bootstrap core JavaScript: jQuery first, then Popper.js, then Bootstrap JS.
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'themesmandu-starter-popper', get_template_directory_uri() . '/vendor/bootstrap-src/js/popper.min.js', array(), '1.14.3', true );
 	wp_enqueue_script( 'themesmandu-starter-bootstrap', get_template_directory_uri() . '/vendor/bootstrap-src/js/bootstrap.min.js', array(), '4.1.2', true );
 
-	// Loading main stylesheet.
-	wp_enqueue_style( 'main-css', get_theme_file_uri( '/assets/css/main.css' ), array( 'themesmandu-starter-style' ), wp_get_theme()->get( 'Version' ) );
+	// Theme added JavaScript: Added by Developers
+	wp_enqueue_script( 'themesmandu-starter-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
 
 	// Theme scripts.
 	wp_enqueue_script( 'themesmandu-starter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '26032012', true );
