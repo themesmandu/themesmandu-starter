@@ -29,8 +29,10 @@
 			the_custom_logo();
 		}
 		?>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+			<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-nav">
+				<span></span>
+				<span></span>
+				<span></span>
 			</button>
 
 			<?php
@@ -41,6 +43,7 @@
 					'container_id'    => 'main-nav',
 					'container_class' => 'collapse navbar-collapse justify-content-end',
 					'menu_id'         => false,
+					'depth'			  => 8,
 					'menu_class'      => 'navbar-nav',
 					'fallback_cb'     => 'Themesmandu_Starter_WP_Bootstrap_Navwalker::fallback',
 					'walker'          => new Themesmandu_Starter_WP_Bootstrap_Navwalker(),
