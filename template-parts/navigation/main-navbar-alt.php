@@ -12,23 +12,23 @@
 	<nav class="navbar navbar-expand-lg main-navigation append-left">
 		<div class="container">
 			<?php
-			if (!has_custom_logo()) {
-				if (is_front_page() && is_home()) :
+			if ( ! has_custom_logo() ) {
+				if ( is_front_page() && is_home() ) :
 					?>
 
-					<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name'); ?></a></h1>
-				<?php
+					<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
 			else :
 				?>
 
-					<a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name'); ?></a>
+					<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
 
 				<?php
 			endif;
-		} else {
-			the_custom_logo();
-		}
-		?>
+			} else {
+				the_custom_logo();
+			}
+			?>
 
 			<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-nav">
 				<span></span>
@@ -45,14 +45,14 @@
 					'menu_class'      => 'navbar-nav mr-auto',
 					'fallback_cb'     => 'Themesmandu_Starter_WP_Bootstrap_Navwalker::fallback',
 					'menu_id'         => false,
-					'depth'			  => 8,
+					'depth'           => 8,
 					'walker'          => new Themesmandu_Starter_WP_Bootstrap_Navwalker(),
 				)
 			);
 			?>
 
 			<?php
-			get_template_part('template-parts/navigation/add-item', 'search-form');
+			get_template_part( 'template-parts/navigation/add-item', 'search-form' );
 			?>
 
 
