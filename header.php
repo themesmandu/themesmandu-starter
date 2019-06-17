@@ -42,4 +42,4 @@
 		}
 		?>
 
-	<div id="content" class="site-content pt-4">
+	<div id="content" class="content-wrap">

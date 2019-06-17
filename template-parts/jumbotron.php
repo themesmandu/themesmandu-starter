@@ -45,7 +45,7 @@ if ( ! empty( $bg_img ) ) {
 
 	<?php if ( ! empty( $btn_label ) ) { ?>
 		<p>
-			<a href="<?php echo esc_url( $btn_link ); ?>" class="btn btn-primary my-2">
+			<a href="<?php echo esc_url( $btn_link ); ?>" class="btn btn-primary">
 			<?php echo esc_html( $btn_label ); ?>
 			</a>
 		</p>

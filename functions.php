@@ -175,7 +175,11 @@ function themesmandu_starter_scripts() {
 	// Theme added JavaScript: Added by Developers.
 	wp_enqueue_script( 'themesmandu-starter-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
 
-	wp_enqueue_style( 'themesmandu-starter-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:100,400,500,700,900&display=swap', false );
+	// Font Open Sans
+	wp_enqueue_style( 'themesmandu-starter-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap', false );
+
+	// Font Garamond
+	wp_enqueue_style( 'themesmandu-starter-custom-google-fonts', 'https://fonts.googleapis.com/css?family=EB+Garamond:400,700&display=swap', false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

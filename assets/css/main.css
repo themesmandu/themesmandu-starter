@@ -6,7 +6,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    font-family: Roboto;
+    font-family: 'EB Garamond', serif;
     font-size: 16px;
     line-height: 1.5;
     word-break: break-word;
@@ -148,5 +148,5 @@ table caption {
 /* -- Container Styles -- */
 
 .container {
-    max-width: 1200px;
+    max-width: 1230px;
 }
