@@ -20,7 +20,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'themesmandu-starter' ); ?></a>
+	<a class="skip-link" href="#content"><?php esc_html_e( 'Skip to content', 'themesmandu-starter' ); ?></a>
 
 		<?php
 		if ( get_theme_mod( 'menubar_mode' ) === 'alt' ) {

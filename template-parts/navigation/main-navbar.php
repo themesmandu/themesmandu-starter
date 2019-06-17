@@ -46,7 +46,6 @@
 					'depth'			  => 8,
 					'menu_class'      => 'navbar-nav',
 					'fallback_cb'     => 'Themesmandu_Starter_WP_Bootstrap_Navwalker::fallback',
-					'walker'          => new Themesmandu_Starter_WP_Bootstrap_Navwalker(),
 				)
 			);
 			?>

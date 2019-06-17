@@ -9,7 +9,7 @@
 
 ?>
 <header id="masthead" class="site-header" role="banner">
-	<nav class="navbar navbar-expand-lg alt-navigation">
+	<nav class="navbar navbar-expand-lg main-navigation append-left">
 		<div class="container">
 			<?php
 			if (!has_custom_logo()) {
