@@ -29,7 +29,7 @@
 				the_custom_logo();
 			}
 			?>
-			<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-nav">
+			<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmenus">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -40,7 +40,7 @@
 				array(
 					'theme_location'  => 'primary',
 					'container'       => 'div',
-					'container_id'    => 'main-nav',
+					'container_id'    => 'navbarmenus',
 					'container_class' => 'collapse navbar-collapse justify-content-end',
 					'menu_id'         => false,
 					'depth'           => 8,

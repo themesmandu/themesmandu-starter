@@ -175,11 +175,8 @@ function themesmandu_starter_scripts() {
 	// Theme added JavaScript: Added by Developers.
 	wp_enqueue_script( 'themesmandu-starter-basic', get_template_directory_uri() . '/assets/js/basic.js', array(), wp_get_theme()->get( 'Version' ), true );
 
-	// Font Open Sans
-	wp_enqueue_style( 'themesmandu-starter-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap', false );
-
-	// Font Garamond
-	wp_enqueue_style( 'themesmandu-starter-custom-google-fonts', 'https://fonts.googleapis.com/css?family=EB+Garamond:400,700&display=swap', false );
+	// Font Nunito And Advent Pro
+	wp_enqueue_style( 'themesmandu-starter-custom-google-fonts', 'https://fonts.googleapis.com/css?family=Advent+Pro:400,600,700|Nunito:400,600,700&display=swap', false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -191,3 +188,9 @@ add_action( 'wp_enqueue_scripts', 'themesmandu_starter_scripts' );
  * Load theme required files.
  */
 require get_template_directory() . '/inc/init.php';
+
+function wildspirit_add_classes_on_link_attributes( $classes ) {
+	$classes['class'] = 'nav-link';
+	return $classes;
+}
+add_filter( 'nav_menu_link_attributes', 'wildspirit_add_classes_on_link_attributes' );
