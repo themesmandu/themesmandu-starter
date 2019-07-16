@@ -1,5 +1,5 @@
 /*!
-Theme Name: Themesmandu_Starter
+Theme Name: Themesmandu Starter
 Theme URI: 
 Author: Themesmandu
 Author URI: https://www.themesmandu.com/
@@ -19,12 +19,42 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 .skip-link {
     font-size: 14px;
-    font-weight: 700;
-    color: #21759b;
-    display: block;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    scroll-behavior: smooth;
+    color: #ffffff;
+    position: absolute;
+    top: 35%;
+    z-index: 9;
+    transform: rotate(-90deg);
+}
+
+.skip-link:before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #f5f5f5;
+    top: 10px;
+    border-radius: 100%;
+    margin-left: 10px;
+    right: -163px;
+    opacity: 0;
+    z-index: 9;
+    animation: scroll 5s ease infinite;
+}
+
+.skip-link:after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 1px;
+    border-color: #f5f5f5;
+    border-top-width: 1px;
+    border-top-style: solid;
+    top: 13px;
+    margin-left: 10px;
+}
+
+.skip-link:hover {
+    color: #ffffff;
 }
 
 .skip-link :focus {
@@ -195,4 +225,23 @@ figcaption,
 .up-btn.ayotothetop {
     visibility: visible;
     transform: translate3d(0, 0, 0);
+}
+
+
+/* -- Animation To The Content -- */
+
+@keyframes scroll {
+    0% {
+        right: -163px;
+    }
+    20% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        right: -13px;
+        opacity: 0;
+    }
 }

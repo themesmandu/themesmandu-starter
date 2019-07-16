@@ -150,3 +150,34 @@ table caption {
 .container {
     max-width: 1230px;
 }
+
+.navbar-expand-lg>.container,
+.navbar-expand-lg>.container-fluid {
+    padding: 0 15px;
+}
+
+
+/* -- Main Navigation Styles -- */
+
+.main-navigation {
+    padding: 15px 0;
+    z-index: 9;
+}
+
+.main-navigation.fixed {
+    position: fixed;
+    top: 15px;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    transition: all 0.3s;
+}
+
+.main-navigation.fixed {
+    top: -70px;
+    transform: translate3d(0, 70px, 0);
+}
+
+.nav-search .navbar-nav {
+    margin: auto;
+}

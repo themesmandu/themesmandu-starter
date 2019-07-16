@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 $themesmandu_starter_content = get_theme_mod( 'blog_layout' ) === 'list' ? '-list' : '';

@@ -1,10 +1,10 @@
 <?php
 /**
- * Themesmandu_Starter Standalone Functions.
+ * Themesmandu-starter Standalone Functions.
  *
  * Some of the functionality here could be replaced by core features.
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 if ( ! function_exists( 'themesmandu_starter_entry_summary' ) ) :

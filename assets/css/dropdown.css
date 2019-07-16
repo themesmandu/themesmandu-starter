@@ -175,7 +175,7 @@
         top: 6px;
         transform: rotate(-135deg);
     }
-    #navbarmenus {
+    .appear-left #navbarmenus {
         overflow-y: auto;
         position: fixed;
         background-color: #000000;
@@ -190,7 +190,7 @@
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
     }
-    #navbarmenus.show {
+    .appear-left #navbarmenus.show {
         left: 0;
     }
     #navbarmenus .navbar-nav .menu-item {

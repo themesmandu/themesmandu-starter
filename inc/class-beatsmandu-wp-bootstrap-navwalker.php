@@ -10,17 +10,17 @@
  * License: GPL-3.0+
  * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 /* Check if Class Exists. */
-if ( ! class_exists( 'Themesmandu_Starter_WP_Bootstrap_Navwalker' ) ) {
+if ( ! class_exists( 'themesmandu_starter_WP_Bootstrap_Navwalker' ) ) {
 	/**
-	 * Themesmandu_starter_WP_Bootstrap_Navwalker class.
+	 * themesmandu_starter_WP_Bootstrap_Navwalker class.
 	 *
 	 * @extends Walker_Nav_Menu
 	 */
-	class Themesmandu_Starter_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+	class themesmandu_starter_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 
 		/**
 		 * Starts the list before the elements are added.
@@ -177,12 +177,7 @@ if ( ! class_exists( 'Themesmandu_Starter_WP_Bootstrap_Navwalker' ) ) {
 			// If item has_children add atts to <a>.
 			if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && $args->depth > 1 ) {
 
-				if ( get_theme_mod( 'mainmenu_dropdown_mode' ) !== 'bootstrap' ) {
-					$atts['href'] = ! empty( $item->url ) ? $item->url : '';
-				} else {
-					$atts['href'] = '#';
-				}
-
+				$atts['href']          = ! empty( $item->url ) ? $item->url : '';
 				$atts['data-toggle']   = 'dropdown';
 				$atts['aria-haspopup'] = 'true';
 				$atts['aria-expanded'] = 'false';

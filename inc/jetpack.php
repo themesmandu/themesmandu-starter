@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 /**

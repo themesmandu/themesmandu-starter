@@ -1,36 +1,41 @@
 <?php
+
 /**
  * Template part for alternative displaying main navigation top-bar.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 ?>
-<header id="masthead" class="site-header" role="banner">
-	<nav class="navbar navbar-expand-lg main-navigation append-left">
+<?php if (get_theme_mod('mainmenu_dropdown_mode') !== 'bootstrap') { ?>
+
+	<nav class="navbar navbar-expand-lg main-navigation nav-search appear-left">
+	<?php } else { ?>
+		<nav class="navbar navbar-expand-lg main-navigation nav-search">
+		<?php } ?>
 		<div class="container">
 			<?php
-			if ( ! has_custom_logo() ) {
-				if ( is_front_page() && is_home() ) :
+			if (!has_custom_logo()) {
+				if (is_front_page() && is_home()) :
 					?>
 
-					<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php
-			else :
-				?>
+					<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name'); ?></a></h1>
+				<?php
+				else :
+					?>
 
-					<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+					<a class="navbar-brand" rel="home" href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" itemprop="url"><?php bloginfo('name'); ?></a>
 
 				<?php
-			endif;
+				endif;
 			} else {
 				the_custom_logo();
 			}
 			?>
 
-			<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-nav">
+			<button id="menu" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarmenus">
 				<span></span>
 				<span></span>
 				<span></span>
@@ -40,22 +45,21 @@
 			wp_nav_menu(
 				array(
 					'theme_location'  => 'primary',
-					'container_class' => 'collapse navbar-collapse',
-					'container_id'    => 'navbarNavDropdown',
-					'menu_class'      => 'navbar-nav mr-auto',
-					'fallback_cb'     => 'Themesmandu_Starter_WP_Bootstrap_Navwalker::fallback',
+					'container'       => 'div',
+					'container_id'    => 'navbarmenus',
+					'container_class' => 'collapse navbar-collapse justify-content-end',
 					'menu_id'         => false,
 					'depth'           => 8,
-					'walker'          => new Themesmandu_Starter_WP_Bootstrap_Navwalker(),
+					'menu_class'      => 'navbar-nav',
+					'fallback_cb'     => 'themesmandu_starter_WP_Bootstrap_Navwalker::fallback',
 				)
 			);
 			?>
 
 			<?php
-			get_template_part( 'template-parts/navigation/add-item', 'search-form' );
+			get_template_part('template-parts/navigation/add-item', 'search-form');
 			?>
 
 
 		</div><!-- .container -->
 	</nav><!-- .site-navigation -->
-</header><!-- #masthead -->

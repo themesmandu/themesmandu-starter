@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 get_header();

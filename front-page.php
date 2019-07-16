@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * The front page template file
@@ -7,32 +8,13 @@
  * appear.
  * Learn more: https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 get_header();
 ?>
 
-<div class="container">
-	<div class="row">
 
-		<div id="primary" class="content-area col-md-12">
-			<main id="main" class="site-main">
-
-			<?php
-			while ( have_posts() ) :
-				the_post();
-
-				get_template_part( 'template-parts/front-page/content' );
-
-			endwhile; // End of the loop.
-			?>
-
-			</main>
-		</div><!-- #primary -->
-
-	</div><!-- /.row -->
-</div><!-- /.container -->
 
 <?php
 get_footer();

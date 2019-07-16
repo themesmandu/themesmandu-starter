@@ -1,10 +1,10 @@
 <?php
 /**
- * Themesmandu_Starter Theme Customizer
+ * Themesmandu-starter Theme Customizer
  *
  * @param WP_Customize_Manager $wp_customize the Customizer object.
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 /**
@@ -40,19 +40,19 @@ function themesmandu_starter_customize_register( $wp_customize ) {
 
 	$theme_colors[] = array(
 		'slug'      => 'menu_bar_bgcolor',
-		'default'   => '#343a40',
+		'default'   => '#ffffff',
 		'label'     => esc_html__( 'Main Menu Bar Background', 'themesmandu-starter' ),
 		'transport' => 'postMessage',
 	);
 	$theme_colors[] = array(
 		'slug'      => 'menu_color',
-		'default'   => '#b3b2b2',
+		'default'   => '#ffffff',
 		'label'     => esc_html__( 'Main Menu Color', 'themesmandu-starter' ),
 		'transport' => 'postMessage',
 	);
 	$theme_colors[] = array(
 		'slug'      => 'menu_hover_color',
-		'default'   => '#dedede',
+		'default'   => '#f3ca7a',
 		'label'     => esc_html__( 'Main Menu Hover Color', 'themesmandu-starter' ),
 		'transport' => 'refresh',
 	);
@@ -64,7 +64,7 @@ function themesmandu_starter_customize_register( $wp_customize ) {
 	);
 	$theme_colors[] = array(
 		'slug'      => 'main_color',
-		'default'   => '#212529',
+		'default'   => '#ffffff',
 		'label'     => esc_html__( 'Main Text Color', 'themesmandu-starter' ),
 		'transport' => 'postMessage',
 	);
@@ -111,21 +111,15 @@ function themesmandu_starter_customize_register( $wp_customize ) {
 		'transport' => 'postMessage',
 	);
 	$theme_colors[] = array(
-		'slug'      => 'primary_btn_color',
+		'slug'      => 'themesmandu_starter_btn_color',
 		'default'   => '#0062cc',
-		'label'     => esc_html__( 'Primary Button Color', 'themesmandu-starter' ),
+		'label'     => esc_html__( 'Themesmandu Starter Button Background Color', 'themesmandu-starter' ),
 		'transport' => 'postMessage',
 	);
 	$theme_colors[] = array(
-		'slug'      => 'primary_btn_hover_color',
+		'slug'      => 'themesmandu_starter_btn_hover_color',
 		'default'   => '#0069d9',
-		'label'     => esc_html__( 'Primary Button: Hover Color', 'themesmandu-starter' ),
-		'transport' => 'refresh',
-	);
-	$theme_colors[] = array(
-		'slug'      => 'primary_btn_active_color',
-		'default'   => '#0062cc',
-		'label'     => esc_html__( 'Primary Button: Active Color', 'themesmandu-starter' ),
+		'label'     => esc_html__( 'Themesmandu Starter Button Background: Hover Color', 'themesmandu-starter' ),
 		'transport' => 'refresh',
 	);
 	$theme_colors[] = array(
@@ -778,10 +772,11 @@ function themesmandu_starter_customizer_css() {
 	<style type="text/css">
 		<?php
 			themesmandu_starter_generate_css( '.front-page .jumbotron', 'background-color', 'banner_bg_color' );
-			themesmandu_starter_generate_css( '.navbar.navbar-dark', 'background-color', 'menu_bar_bgcolor' );
-			themesmandu_starter_generate_css( '.navbar-dark .navbar-nav .nav-link', 'color', 'menu_color' );
-			themesmandu_starter_generate_css( '.navbar-dark .navbar-nav .nav-link:hover', 'color', 'menu_hover_color' );
-			themesmandu_starter_generate_css( '.navbar-dark .navbar-brand, .navbar-dark .navbar-brand:hover', 'color', 'site_title_color' );
+			themesmandu_starter_generate_css( '.navbar', 'background-color', 'menu_bar_bgcolor' );
+			themesmandu_starter_generate_css( '.navbar .navbar-nav .nav-link', 'color', 'menu_color' );
+			themesmandu_starter_generate_css( '.menu-item-has-children:after', 'color', 'menu_color' );
+			themesmandu_starter_generate_css( '.navbar .navbar-nav .nav-link:hover', 'color', 'menu_hover_color' );
+			themesmandu_starter_generate_css( '.navbar .navbar-brand, .navbar .navbar-brand:hover', 'color', 'site_title_color' );
 			themesmandu_starter_generate_css( 'body', 'color', 'main_color' );
 			themesmandu_starter_generate_css( '.entry-title, .entry-title a, .page-title', 'color', 'title_color' );
 			themesmandu_starter_generate_css( 'a', 'color', 'link_color' );
@@ -790,26 +785,10 @@ function themesmandu_starter_customizer_css() {
 			themesmandu_starter_generate_css( '.post .card-body', 'background-color', 'entry_bgcolor' );
 			themesmandu_starter_generate_css( '.post .card-footer', 'background-color', 'entry_footer_bgcolor' );
 			themesmandu_starter_generate_css( '.widget-title', 'color', 'wgt_title_color' );
-			themesmandu_starter_generate_css( '.btn-primary', 'background-color', 'primary_btn_color' );
-			themesmandu_starter_generate_css( '.btn-primary', 'border-color', 'primary_btn_color' );
-			themesmandu_starter_generate_css( '.btn-primary:hover', 'background-color', 'primary_btn_hover_color' );
-			themesmandu_starter_generate_css( '.btn-primary:hover', 'border-color', 'primary_btn_hover_color' );
-			themesmandu_starter_generate_css(
-				'.btn-primary:not(:disabled):not(.disabled):active, 
-									.btn-primary:not(:disabled):not(.disabled).active,
-									.show > .btn-primary.dropdown-toggle',
-				'border-color',
-				'primary_btn_active_color'
-			);
-			themesmandu_starter_generate_css(
-				'.btn-primary:not(:disabled):not(.disabled):active, 
-									.btn-primary:not(:disabled):not(.disabled).active,
-									.show > .btn-primary.dropdown-toggle',
-				'background-color',
-				'primary_btn_active_color'
-			);
-			themesmandu_starter_generate_css( '.site-footer', 'background-color', 'footer_bgcolor' );
-			themesmandu_starter_generate_css( '.site-footer, .site-footer a', 'color', 'footer_color' );
+			themesmandu_starter_generate_css( '.btn-themesmandu_starter', 'background-color', 'themesmandu_starter_btn_color' );
+			themesmandu_starter_generate_css( '.btn-themesmandu_starter:hover', 'background-color', 'themesmandu_starter_btn_hover_color' );
+			themesmandu_starter_generate_css( '#footer', 'background-color', 'footer_bgcolor' );
+			themesmandu_starter_generate_css( '#footer', 'color', 'footer_color' );
 		?>
 
 	</style>

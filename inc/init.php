@@ -2,7 +2,7 @@
 /**
  * Load files
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 /**

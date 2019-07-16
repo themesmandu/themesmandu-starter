@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 get_header();

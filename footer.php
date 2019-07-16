@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 ?>
@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 
-	<footer id="colophon" class="site-footer py-5">
+	<footer id="footer">
 
 		<div class="container">
 			<div class="site-info">

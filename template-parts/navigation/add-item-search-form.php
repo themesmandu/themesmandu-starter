@@ -5,7 +5,7 @@
  * If you want to add another item instead of a form, use something like this:
  * <div class="my-2 my-md-0 d-none d-lg-inline">something</div>
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 ?>

@@ -1,10 +1,10 @@
 <?php
 /**
- * Themesmandu_Starter functions and definitions
+ * Themesmandu-starter functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 if ( ! function_exists( 'themesmandu_starter_setup' ) ) :
@@ -19,7 +19,7 @@ if ( ! function_exists( 'themesmandu_starter_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Themesmandu_Starter, use a find and replace
+		 * If you're building a theme based on Themesmandu-starter, use a find and replace
 		 * to change 'themesmandu-starter' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'themesmandu-starter', get_template_directory() . '/languages' );

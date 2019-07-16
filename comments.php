@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Themesmandu_Starter
+ * @package Themesmandu-starter
  */
 
 if ( post_password_required() ) {
